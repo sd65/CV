@@ -1,0 +1,90 @@
+% Declaration for moderncv package
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{red}
+
+% Used to change the Page Color
+\usepackage{pagecolor}
+% Character encoding
+\usepackage[utf8]{inputenc}
+
+% Adjust the page margins
+\usepackage[scale=0.9,top=.4cm,bottom=.4cm]{geometry}
+
+% Personal Info
+\firstname{Sylvain}
+\familyname{Doignon}
+\title{Technology Enthusiast}
+\photo[60pt][0.5pt]{me.jpg}
+%\address{Paris}
+\mobile{+ 33 6 23 54 16 56}
+\email{sylvain.doignon@gmail.com}
+\homepage{http://sylvain.doignon.fr}
+\social[linkedin]{sylvain-doignon}
+\social[github]{sd65}
+
+% No automatic page numbering
+\nopagenumbers{}
+
+% Custom Header theme to add Picture in the Banking Theme
+\input{./customHead.inc.tex}
+
+\begin{document}
+
+% Change the Page Colot
+\definecolor{splashedwhite}{rgb}{0.98, .98, .98}
+\pagecolor{splashedwhite}
+
+% Draw the modernCV Header
+\makecvtitle
+
+\section{Experience}
+  \cventry{March 2017 - June 2O17}{DevOps Engineer}{Société Générale Bank \& Trust}{Luxembourg City}{Intership}{%
+    \begin{itemize}%
+    \item Created a log centralization system
+    \item Adapted a NFS home solution
+    \end{itemize}
+  }
+  \cventry{August 2014 - Now}{DevOps Engineer}{Société Générale}{Paris}{Apprenticeship}{%
+    \begin{itemize}%
+    \item Administered Unix systems
+    \item Achieved APIs \& Web apps as a full-stack developer
+    \item Streamlined a workstation virtualization solution
+    \end{itemize}
+  }
+  \cventry{May 2014 - June 2014}{System administrator}{Gironde Numérique (region federation of IT)}{Bordeaux}{Intership}{%
+    \begin{itemize}%
+    \item Designed a PHP CMS from scratch 
+    \item Modernized city hall internal websites for the region
+    \item Created an supervision app to batch monitor websites
+    \end{itemize}
+  }
+
+\section{Education}
+  \cventry{August 2014 - Now}{Master degree in Computer Sciences \& Engineering}{UTC, Sorbonne Université}{Compiègne}{}{Infrastructure \& Systems specialization}
+  \cventry{September 2012 - June 2014}{Technical degree (DUT) in System \& Network Services}{University of Bordeaux III}{Bordeaux}{}{Graduation with honors}
+
+
+\section{Skills}
+  \cvdoubleitem{Programming}{JS, Go, Python, C, C++, Java, PHP}{Administration}{Git, Shell scripts, Puppet, Web servers}
+  \cvdoubleitem{OS}{RHEL, Arch Linux, Debian, Solaris}{Misc}{Word, Excel, LateX, Photoshop}
+
+\section{Personal Skills}
+  \begin{cvcolumns}
+    \cvcolumn{Constant Learner}{I feel the urge to learn at all times. In fact, thanks to MOOCs, Im able to complete my education. Im currently taking a Machine Learning course from the University of Washington.}
+    \cvcolumn{IT news reader}{I think the IT world is evolving so fast that I need to keep myself updated in the latest technologies. Thats why I spend 30 minutes a day reading my RSS feed.}
+    \cvcolumn{Creative Hacker}{I like to hack \& tweak my devices.  I enjoy finding pratical solutions to all kinds of problems. Furthermore Im a Open-Source pragmatist loving to share on Github}
+  \end{cvcolumns}
+
+\section{Languages}
+  \cvitemwithcomment{French}{Native Language}{}
+  \cvitemwithcomment{English}{Fluent}{TOEIC 970/990}
+  \cvitemwithcomment{Spanish}{Basic}{}
+
+\section{Miscellaneous}
+  \cvitem{Hobbies}{Hacking, Astronomy \& Cooking}
+  \cvitem{Travel}{40 days hitchhiking from France to the Black Sea, road-trip in Croatia, one-month trip in the United States of America, 3 weeks in Nepal \& 4 weeks in Vietnam}
+  \cvitem{Sports}{Longboarding, Hiking, Mountain biking \& Rock climbing}
+
+\end{document}
