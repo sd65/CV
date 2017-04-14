@@ -1,6 +1,6 @@
 # CV
 
-This is my resume. To download or view it click here:
+This is my resume. To download or view it click on the thumbnail below:
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.pdf)" title="Click here to view my resume"><img src="https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.thumbnail.png"/></a>
@@ -17,4 +17,6 @@ This is very pratical. Editing this resume is very easy and no time is wasted ta
 
 ## How to generate the PDF?
 
-Edit the tex file as you wish and simply run `make` after.
+You'll need to install a LateX distribution to generate the PDF. `evince-thumbnailer` is used to generate the thumbnail.
+
+Next, edit the tex file as you wish and simply run `make` after.
