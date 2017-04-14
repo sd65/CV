@@ -2,7 +2,9 @@
 
 This is my resume. To download or view it click here:
 
-[![Click here to view my resume](https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.thumbnail.png))](https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.pdf)
+<p align="center">
+  <a href="https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.pdf)" title="Click here to view my resume"><img src="https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.thumbnail.png"/></a>
+</p>
 
 ## About
 
