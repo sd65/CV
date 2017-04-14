@@ -8,6 +8,10 @@
 \usepackage{pagecolor}
 % Character encoding
 \usepackage[utf8]{inputenc}
+% Date for "Updated On"
+\usepackage{datetime}
+% Custom Date Format
+\newdateformat{mydateformat}{\monthname\ \THEYEAR}
 
 % Adjust the page margins
 \usepackage[scale=0.9,top=.4cm,bottom=.4cm]{geometry}
@@ -16,8 +20,9 @@
 \firstname{Sylvain}
 \familyname{Doignon}
 \title{Technology Enthusiast}
-\photo[60pt][0.5pt]{me.jpg}
+\photo[75pt][0.5pt]{me.jpg}
 %\address{Paris}
+\extrainfo{\textit{Updated on \mydateformat\today}}
 \mobile{+ 33 6 23 54 16 56}
 \email{sylvain.doignon@gmail.com}
 \homepage{http://sylvain.doignon.fr}
@@ -32,7 +37,7 @@
 
 \begin{document}
 
-% Change the Page Colot
+% Change the Page Color
 \definecolor{splashedwhite}{rgb}{0.98, .98, .98}
 \pagecolor{splashedwhite}
 

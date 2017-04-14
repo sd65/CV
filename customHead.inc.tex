@@ -18,6 +18,7 @@
         \addressfont\color{color2}%
         \if@left\begin{tabular}[b]{@{}r@{}}\fi%
         \if@right\begin{tabular}[b]{@{}l@{}}\fi%
+          \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
           \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
             \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
             \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
@@ -25,7 +26,6 @@
           \ifthenelse{\isundefined{\@email}}{}{\makenewline\emailsymbol\emaillink{\@email}}%
           \ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
           \socialsdetails% needs to be pre-rendered as loops and tabulars seem to conflict
-          \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
         \end{tabular}
       }\fi%
     % optional photo (pre-rendering)
@@ -53,7 +53,7 @@
     \savebox{\makecvheadnamebox}{%
       \hspace*{-120pt}%
       \begin{minipage}[t]{\makecvheadnamewidth}%
-        \vspace{-53pt}
+        \vspace{-60pt}
         \Huge\upshape\textcolor{black}{\@firstname\ \@lastname}%
         \vspace{-30pt}
         \ifthenelse{\equal{\@title}{}}{}{
