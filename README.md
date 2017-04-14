@@ -1,6 +1,8 @@
 # CV
 
-This is my resume. To download or view it:
+This is my resume. To download or view it: 
+
+[**Click here**](https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.pdf)
 
 ## About
 
