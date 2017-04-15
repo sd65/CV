@@ -3,7 +3,7 @@
 This is my resume. To download or view it click on the thumbnail below:
 
 <p align="center">
-  <a href="https://github.com/sd65/CV/raw/master/CV_Sylvain-Doignon.pdf)" title="Click here to view my resume"><img src="https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.thumbnail.png"/></a>
+  <a href="https://github.com/sd65/CV/raw/master/CV_Sylvain-Doignon.pdf" title="Click here to view my resume"><img src="https://raw.githubusercontent.com/sd65/CV/master/CV_Sylvain-Doignon.thumbnail.png"/></a>
 </p>
 
 ## About
