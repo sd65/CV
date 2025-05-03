@@ -1,12 +1,25 @@
-FILE = CV_Sylvain-Doignon
+FILE := CV_Sylvain-Doignon
+PDF := $(FILE).pdf
+THUMB := $(FILE).thumbnail.png
 
-.PHONY: build clean release
+DOCKER_IMAGE_NAME := latex
 
-release: clean
-	evince-thumbnailer --size=500 $(FILE).pdf $(FILE).thumbnail.png
+.PHONY: all build clean thumbnail watch prepare
 
-clean: build
-	rm $(FILE).{log,out,aux}
+all: build
 
 build: $(FILE).tex
-	TEXINPUTS=.:./moderncv/: pdflatex $(FILE).tex
+	docker run --rm -i -v "$(PWD)":/data latex pdflatex $(FILE).tex
+
+clean:
+	rm -f $(FILE).{log,out,aux}
+
+thumbnail:
+	docker run --rm -i -v "$(PWD)":/data $(DOCKER_IMAGE_NAME) evince-thumbnailer --size=500 $(PDF) $(THUMB)
+
+watch:
+	fswatch -o $(FILE).tex customHead.inc.tex | \
+		xargs -n1 -I{} sh -c 'docker run --rm -i -v "$(PWD)":/data $(DOCKER_IMAGE_NAME) pdflatex $(FILE).tex && open $(PDF)'
+
+prepare:
+	docker build -t $(DOCKER_IMAGE_NAME) .

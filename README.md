@@ -17,6 +17,4 @@ This is very pratical. Editing this resume is very easy and no time is wasted ta
 
 ## How to generate the PDF?
 
-You'll need to install a LateX distribution to generate the PDF. `evince-thumbnailer` is used to generate the thumbnail.
-
-Next, edit the tex file as you wish and simply run `make` after.
+On Mac, install `OrbStack` and `fswatch` with brew.
