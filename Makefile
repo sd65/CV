@@ -19,7 +19,7 @@ thumbnail:
 
 watch:
 	fswatch -o $(FILE).tex customHead.inc.tex | \
-		xargs -n1 -I{} sh -c 'docker run --rm -i -v "$(PWD)":/data $(DOCKER_IMAGE_NAME) pdflatex $(FILE).tex && open $(PDF)'
+		xargs -n1 -I{} sh -c 'docker run --rm -i -v "$(PWD)":/data $(DOCKER_IMAGE_NAME) xelatex $(FILE).tex && open $(PDF)'
 
 prepare:
 	docker build -t $(DOCKER_IMAGE_NAME) .
