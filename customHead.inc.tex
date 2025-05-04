@@ -36,6 +36,7 @@
         {%
           \if@left%
             \hspace*{\separatorcolumnwidth}\fi%
+          \hspace*{-4pt}%
           \color{color1}%
           \setlength{\fboxrule}{\@photoframewidth}%
           \ifdim\@photoframewidth=0pt%
@@ -51,13 +52,13 @@
       {}%
     \@initializebox{\makecvheadnamebox}%
     \savebox{\makecvheadnamebox}{%
-      \hspace*{-120pt}%
+      \hspace*{-75pt}%
       \begin{minipage}[t]{\makecvheadnamewidth}%
-        \vspace{-60pt}
+        \vspace{-50pt}
         \Huge\upshape\textbf{\textcolor{black}{\@firstname\ \@lastname}}%
-        \vspace{-30pt}
+        \vspace{-25pt}
         \ifthenelse{\equal{\@title}{}}{}{
-          \\[1.25em]\huge\upshape\textcolor{color1}{\@title}%
+          \\[1.2em]\Large\upshape\textcolor{color1}{\@title}%
         }%
       \end{minipage}}%
     % rendering
@@ -65,7 +66,7 @@
       \hfill%
       \usebox{\makecvheadnamebox}%
       \hfill%
-      \llap{\usebox{\makecvheaddetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvheadnamewidth is forced
+      \llap{\raisebox{26pt}{\usebox{\makecvheaddetailsbox}}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvheadnamewidth is forced
     % optional quote
     \ifthenelse{\isundefined{\@quote}}%
       {}%
